@@ -25,6 +25,21 @@ public class TransactionRecord implements Serializable {
         this.balance = balance;
     }
 
+    public int getAccountId(){
+
+        return this.accountID;
+    }
+
+    public double getbalance()
+    {
+        return this.balance;
+    }
+
+    // public void setBalance(double money)
+    // {
+    //     this.balance = money;
+    // }
+
 
     void main(String[] args) throws IOException {
         ObjectInputStream fileIn = new ObjectInputStream(new FileInputStream("transactions.ser"));
@@ -76,7 +91,7 @@ public class TransactionRecord implements Serializable {
 
     }
 
-    // public int void getExchangeListSize()
+    // public int etExchangeListSize()
     // {
         
     // }
