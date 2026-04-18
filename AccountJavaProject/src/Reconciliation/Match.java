@@ -9,6 +9,7 @@ import java.util.Collections;
 public class Match {
     private static ArrayList<Account> customer = new ArrayList<>();
 
+    //this should just be the constructor Match(); or Match(File filename);
     public void main(String[] args) throws IOException {
         ObjectInputStream fileIn = new ObjectInputStream(new FileInputStream("mainmasterfile.ser"));
 
@@ -49,10 +50,20 @@ public class Match {
 
     }
 
+   
     public void MatchToTransaction() {
 
+        int exchange_size = TransactionRecord.exchange.size();
+        
         for (Account account : customer) {
-            for(TransactionRecord.exchange.getAccountNumberTransaction())
+            for(TransactionRecord cost : TransactionRecord.exchange)
+                {
+                    if(cost.getAccountId().equals(account.getAccount()))
+                       {
+                           account.setBalance(cost.getbalance());
+                       }
+                        
+                }
         }
     }
 
