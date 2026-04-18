@@ -76,6 +76,11 @@ public class TransactionRecord implements Serializable {
 
     }
 
+    // public int void getExchangeListSize()
+    // {
+        
+    // }
+
 
 
 
